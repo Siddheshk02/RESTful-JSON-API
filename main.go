@@ -97,10 +97,15 @@ func homeLink(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Welcome!!")
 }
 
+func options(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "\n- GET = Retrieve a event or data of a resource. \n- POST = Create a event or add data to the resourse. \n- DELETE = Delete if you are requesting the server to delete the resource. \n- PATCH = Update partial content of a resource. \n- OPTIONS = Get information about the communication options for the request URI")
+}
+
 func main() {
 	
 	router := mux.NewRouter().StrictSlash(true)
 	router.HandleFunc("/", homeLink)
+	router.HandleFunc("/events/options", options)
 	router.HandleFunc("/event", createEvent).Methods("POST")
 	router.HandleFunc("/events", getAllEvents).Methods("GET")
 	router.HandleFunc("/events/{id}", getOneEvent).Methods("GET")
