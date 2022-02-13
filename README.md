@@ -2,15 +2,21 @@
 
 This basic REST-API principle establishes a one-to-one mapping between create, read, update, and delete (CRUD) operations and HTTP methods. According to this mapping:
 
+- OPTIONS = Get information about the communication options for the request URI
 - GET = Retrieve a event or data of a resource
 - POST = Create a event or add data to the resourse.
 - DELETE = Delete if you are requesting the server to delete the resource
 - PATCH = Update partial content of a resource
-- OPTIONS = Get information about the communication options for the request URI
+
 
 For storing JSON data, a struct events of event is created
 
 Commands/URLs:
+
+ OPTIONS :
+  ```
+  curl -X VIEW /events/options
+ ```
 
  GET :
  ```
