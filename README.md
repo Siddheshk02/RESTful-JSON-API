@@ -8,15 +8,34 @@ This basic REST-API principle establishes a one-to-one mapping between create, r
 - PATCH = Update partial content of a resource
 - OPTIONS = Get information about the communication options for the request URI
 
-Commands for
+For storing JSON data, a struct events of event is created
+
+Commands/URLs:
+
  GET :
  ```
-  curl -X http://localhost:8080/events
+  curl -X /events
  ```
  or
  ```
-  curl -X GET http://localhost:8080/events
-  ```
+  curl -X GET /events
+ ```
   
-  POST :
+ POST :
+ 
+ ```
+  curl -H "Content-Type: application/json" -X POST /event -d '{"id":"_ID_","title":"_TITLE_","description":"_DESCRIPTION_"}'
+ ```
+ 
+ PATCH:
+ 
+ ```
+  curl -H "Content-Type: application/json" -X PATCH /event -d '{"id":"_ID_","title":"_TITLE_","description":"_DESCRIPTION_"}'
+ ```
+  
+ DELETE:
+ 
+ ```
+  curl -X DELETE /events/id
+ ```
   
