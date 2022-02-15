@@ -22,7 +22,7 @@ Commands/URLs:
  ```
   curl -X /events
  ```
-     or
+   or
  ```
   curl -X GET /events
  ```
