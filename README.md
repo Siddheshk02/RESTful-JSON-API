@@ -1,5 +1,4 @@
 # RESTful-JSON-API using Go
-![image](https://user-images.githubusercontent.com/90148705/155867818-b8806d94-1e2d-4823-bfd7-ff22339975bc.png)
 
 
 This basic REST-API principle establishes a one-to-one mapping between create, read, update, and delete (CRUD) operations and HTTP methods. According to this mapping:
